@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+// import { createStore } from "redux";
+// import { counterReducer } from "./pages/redux/counterReducer";
+import MyRoutes from "./MyRoutes";
+import './mystyle.css'
+import { GlobalContextProvider } from "./pages/Hooks/GlobalContext";
+import { myStore, myPersistor } from './pages/redux/store'
+import { PersistGate } from 'redux-persist/integration/react'
 
 function App() {
+  // const mystore = createStore(counterReducer)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Provider store={myStore}>
+        <PersistGate persistor={myPersistor}>
+          <GlobalContextProvider>
+            <MyRoutes />
+          </GlobalContextProvider>
+        </PersistGate>
+      </Provider>
+    </>
   );
 }
 

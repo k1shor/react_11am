@@ -1,0 +1,22 @@
+*{
+    /* margin: 0 !important;
+    box-sizing: border-box !important; */
+    /* padding: 0 !important; */
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+.custom-bg{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(248,255,198,1) 0%, rgba(188,151,140,1) 100.2% );
+}
+
+.custom-carousel, .carousel-inner{
+    height: 450px;
+}
+
+.card-image{
+    height: 200px;
+}
