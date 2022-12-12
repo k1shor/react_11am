@@ -12,6 +12,8 @@ import PostDetails from './pages/Hooks/PostDetails'
 import Products from './pages/Products'
 import Counter2 from './pages/redux/Counter2'
 import Games from './pages/redux/Games'
+import Cartpage from './pages/redux/Project/Cartpage'
+import Mainpage2 from './pages/redux/Project/Mainpage'
 import Register from './pages/Register'
 import Signin from './pages/Signin'
 import Second from './Second'
@@ -39,6 +41,8 @@ const MyRoutes = () => {
             {/* redux */}
             <Route path='/count' element={<Counter2/>}/>
             <Route path='/games' element={<Games/>}/>
+            <Route path='/mainpage' element= {<Mainpage2/>}/>
+            <Route path='/cartpage' element={<Cartpage/>}/>
         </Routes>
     </BrowserRouter>
   )
